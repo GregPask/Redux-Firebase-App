@@ -1,0 +1,111 @@
+$navbar: #2A2A2A;
+$yellow: #FFFF00;
+$bluey: #04C7FF;
+$black: #000000;
+$orange: #FF813F;
+
+
+
+#navbar {
+    background-color: $navbar;
+    color: #fff;
+    height: 80px;
+}
+
+
+.containers {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+}
+
+
+.fab{
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-self: center;   
+}
+
+#nav-left {
+    display: flex;
+
+    h2 {
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+#nav-right {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+
+    .nav-link {
+        color: #ccc;
+        text-decoration: none;
+        margin-left: 2rem;
+        letter-spacing: 1.2px;
+        font-size: 1.25rem;
+        transition: all 0.1s ease;
+        height: 100%;
+        border: 2px solid rgba(255, 0, 0, 0);
+    }
+
+    .nav-link:hover {
+        color: #fff;
+        border-bottom: 2px solid $yellow;
+    }
+}
+
+
+// Nav button toggle
+
+#nav-btn {
+    position: absolute;
+    display: none;
+    right: 30px;
+    top: 45%;
+    cursor: pointer;
+    transform: translate(0,-50%);
+    div {
+        width: 25px;
+        height: 4px;
+        background-color: #fff;
+        margin-top: 4px;
+    }
+}
+
+#nav-btn:hover #nav-btn div {
+    background-color: $yellow;
+}
+
+
+
+
+@media(max-width: 768px){
+    #nav-right {
+        display: none;
+    }
+
+    #nav-btn {
+        display: block;
+    }
+
+
+}

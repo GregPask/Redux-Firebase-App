@@ -1,0 +1,284 @@
+$navbar: #2A2A2A;
+$yellow: #FFFF00;
+$bluey: #04C7FF;
+$black: #000000;
+$orange: #FF813F;
+
+#dashboard {
+    background-color: rgb(224, 245, 248);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+#dashboard-container {
+    
+   
+    overflow: hidden;
+    max-width: 910px;
+    margin: auto;
+    // border: 1px solid red;
+   transition: all 0.3s ease;
+     padding: 1rem 0px ;
+
+    h2 {
+        text-align: center;
+        color: $navbar;
+    }
+}
+
+
+
+#message-board {
+    height: 550px;
+    width: 600px;
+    padding: 1.2rem;
+    background-color: $bluey;
+    margin: 0.5rem auto 2rem auto;
+    box-shadow: 5px 10px 9px 1px rgba(51, 51, 51, 0.507);
+    border-radius: 2rem 0 0 2rem;
+    overflow-y: scroll;
+    z-index: 100;
+    scroll-behavior: smooth;
+    // border: 2px solid rgba(51, 51, 51, 0.589);
+}
+
+
+#add-message {
+    width: 700px;
+    margin: auto;
+    border-radius: 0;
+    transition: all 0.4s ease;
+    
+    form {
+
+        input {
+            border-radius: 0;
+            height: 60px;
+            outline: none;
+            font-size: 1.8rem;
+            border: 1px solid rgba(39, 39, 39, 0.459);
+           transition: all 0.4s ease;
+        }
+
+        input:focus{
+           
+            outline-color: transparent;
+            outline-style: none;
+            // border: 2px solid rgba(0, 0, 0, 0.527);
+        }
+
+
+         div {
+             display: flex;
+             justify-content: flex-end;
+         }
+
+        button {
+            background-color: $orange;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 0;
+            padding: 10px 25px;
+            border: 0;
+            //  margin-top: 1rem;
+            height: 60px;
+        }
+    }
+}
+
+
+
+#input:focus {
+    box-shadow: none;
+    border: 1px solid rgba(12, 12, 12, 0);
+    border: 1px solid rgba(39, 39, 39, 0.459);
+    background-color: rgba(20, 152, 192, 0.562);
+    color: #fff;
+
+
+   
+}
+
+
+// Individual Messages =============================================
+
+
+.message-left {
+    width: 80%;
+    background-color: $orange;
+    color: #fff;
+    height: auto;
+    border-radius: 1rem;
+    padding: 2px 10px;
+    box-shadow: 5px 5px 10px 1px rgba(51, 51, 51, 0.445);
+}
+
+.message-right {
+   width: 80%; 
+   border-radius: 1rem;
+   padding: 2px 10px;
+   background-color: #fff;
+   height: auto;
+   box-shadow: 5px 5px 10px 1px rgba(51, 51, 51, 0.473);
+}
+
+.message-wrap-left {
+    // background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 1rem 0;
+    
+}
+
+
+.message-wrap-right {
+    // background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.message-name {
+    font-weight: bold;
+    font-family: "roboto";
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.message-message {
+    font-family: "roboto";
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    
+}
+
+#add-btn1, #input1 {
+    display: none;
+}
+
+@media(max-width: 768px){
+    #message-board {
+        width: 500px;
+        margin: auto;
+        height: 400px;
+    }
+
+    #dashboard-container {
+        width: 530px;
+        // margin: auto;
+    }
+
+    #add-message {
+        width: 500px;
+        margin-top: 1rem;
+    }
+
+    #dashboard {
+        height:  1000px;
+    }
+    #add-message-lg {
+        input {
+            display: none;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    #add-btn1, #input1 {
+        display: block;
+    }
+
+    .message-name {
+        font-size: 0.8rem;
+    }
+
+    .message-message {
+        font-size: 0.8rem;
+    }
+
+    .message-right, .message-left {
+        padding: 1px 10px;
+    }
+
+    #add-btn1, #input1 {
+        font-size: 0.1rem;
+    }
+}
+
+
+
+
+
+
+@media(max-width: 568px){
+
+    #message-board {
+        width: 350px;
+        height: 300px;
+        margin: auto;
+    }
+    #dashboard-container {
+        width: 370px;
+        // margin: auto;
+    }
+
+    #add-message {
+        width: 350px;
+        margin-top: 1rem;
+        
+       form {
+        input {
+            font-size: 1.4rem !important;
+        }
+       }
+    }
+
+    .message-name {
+        font-size: 0.7rem;
+    }
+
+    .message-message {
+        font-size: 0.7rem;
+    }
+ 
+
+    #add-btn1, #input1 {
+        font-size: 0.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 400px){
+    #message-board {
+        width: 310px;
+        margin: auto;
+    }
+    #dashboard-container {
+        width: 330px;
+        // margin: auto;
+    }
+
+    #dashboard {
+        padding: 2px;
+    }
+    #add-message {
+        width: 300px;
+        form {
+            input {
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+}

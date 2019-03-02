@@ -1,0 +1,49 @@
+//Files
+
+@import "./navbar.scss";
+@import "./sidebar.scss";
+@import "./home.scss";
+@import "./footer.scss";
+@import "./signup.scss";
+@import "./login.scss";
+@import "./dashboard.scss";
+
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+//Fonts 
+
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+$navbar: #2A2A2A;
+$yellow: #FFFF00;
+$bluey: #04C7FF;
+$black: #000000;
+$orange: #FF813F;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+h1,h2,h3, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.App {
+    margin: 0;
+  
+    padding: 0;
+}
